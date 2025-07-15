@@ -5,6 +5,6 @@
     - name: "Récupération des services existants"
       service_facts:
     - name: "HTTPD ou NGINX running"
-      ansible.build.in.debug:
+      ansible.builtin.debug:
         msg: "Services running"
-      when: '"nginx.service' in services" 
+      when: '"nginx.service' in services or 'httpd.service' in services" 

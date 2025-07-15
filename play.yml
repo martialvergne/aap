@@ -12,3 +12,7 @@
     - name: Afficher variable
       ansible.builtin.shell:
         cmd: env
+      register: result
+    - name: Afficher le résultat
+      debug:
+        var: result.stdout_lines

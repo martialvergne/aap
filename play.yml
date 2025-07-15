@@ -2,17 +2,5 @@
 - hosts: almalinux
   name: Test connectivité AAP
   tasks:
-    - ansible.builtin.debug:
-        msg:
-          - "Ansible Distribution : {{ ansible_distribution }}"
-          - "Ansible Dist version : {{ ansible_distribution_version }}"
-    - name: Set env variables test
-      ansible.builtin.shell:
-        cmd: export test=test2
-    - name: Afficher variable
-      ansible.builtin.shell:
-        cmd: env
-      register: result
-    - name: Afficher le résultat
-      debug:
-        var: result.stdout_lines
+    - name: "Récupération des services existants"
+      service_facts:

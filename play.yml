@@ -1,5 +1,5 @@
 ---
-- hosts: almalinux8
+- hosts: almalinux
   name: Test connectivité AAP
   tasks:
     - ansible.builtin.debug:

@@ -10,5 +10,5 @@
       ansible.builtin.set_fact:
         test=test2
     - name: Afficher variable
-      ansible.builtin.debug:
-        msg: "Env: {{ test }}"
+      ansible.builtin.shell:
+        cmd: env

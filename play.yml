@@ -1,0 +1,8 @@
+---
+- hosts: almalinux
+  name: Test connectivité AAP
+  tasks:
+    - ansible.builtin.debug:
+        msg:
+          - "Ansible Distribution : {{ ansible_distribution }}"
+          - "Ansible Dist version : {{ ansible_distribution_version }}"

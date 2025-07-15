@@ -8,8 +8,7 @@
           - "Ansible Dist version : {{ ansible_distribution_version }}"
     - name: Set env variables test
       ansible.builtin.shell:
-        cmd: env
-        environment: test=test2
+        cmd: export test=test2
     - name: Afficher variable
       ansible.builtin.shell:
         cmd: env | grep test

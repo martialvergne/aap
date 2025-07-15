@@ -7,4 +7,4 @@
     - name: "HTTPD ou NGINX running"
       ansible.builtin.debug:
         msg: "Services running"
-      when: '"nginx.service' in services or 'httpd.service' in services" 
+      when: '"nginx.service' in ansible_facts.services or 'httpd.service' in ansible_facts.services" 

@@ -11,7 +11,7 @@
         cmd: export test=test2
     - name: Afficher variable
       ansible.builtin.shell:
-        cmd: env | grep test
+        cmd: env
       register: result
     - name: Afficher le résultat
       debug:

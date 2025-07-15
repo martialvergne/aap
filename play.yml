@@ -4,3 +4,7 @@
   tasks:
     - name: "Récupération des services existants"
       service_facts:
+    - name: "HTTPD ou NGINX running"
+      ansible.build.in.debug:
+        msg: "Services running"
+      when: "'httpd' in services" OR '"nginx' in services" 
